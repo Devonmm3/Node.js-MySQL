@@ -1,6 +1,6 @@
 CREATE DATABASE Bamazon;
 USE Bamazon;
-CREATE TABLE Products (ProductID int AUTO_INCREMENT, ProductName varchar(50) NOT NULL, DepartmentName varchar(50) NOT NULL, Price varchar(30) NOT NULL, PRIMARY KEY(ProductID) );
+CREATE TABLE Products (ProductID int AUTO_INCREMENT, ProductName varchar(50) NOT NULL, DepartmentName varchar(50) NOT NULL, Price varchar(50) NOT NULL, PRIMARY KEY(ProductID) );
 describe Products;
 SELECT * FROM Products;
 INSERT INTO Products (ProductID, ProductName, DepartmentName, Price, StockQuantity) VALUES (1, "Crockpot", "Home-Kitchenware", 85.89, 202);
@@ -15,3 +15,5 @@ INSERT INTO Products (ProductID, ProductName, DepartmentName, Price, StockQuanti
 INSERT INTO Products (ProductID, ProductName, DepartmentName, Price, StockQuantity) VALUES (10, "Harry Potter and the Half-blood Prince", "Books", 29.99, 98);
 
 SELECT * FROM Products; 
+
+ALTER TABLE Products ADD StockQuantity int(4) NOT NULL default '0';

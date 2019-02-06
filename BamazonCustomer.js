@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) {
-        console.log("Error connecting to Database");
+        // console.log("Error connecting to Database");
         return;
     }
     console.log("Connection Established");
@@ -24,7 +24,7 @@ connection.connect(function (err) {
             },
             howMany: {
                 message: "Please enter the nuber of items you would like to buy.",
-                pattern: /^[0-9] [0-9]$|^[0-9] [0-9] [0-9]$/,
+                pattern: /^[0-9] [0-9]$|^[0-9]$/,
                 required: true
             }
         }
@@ -55,7 +55,7 @@ connection.connect(function (err) {
         console.log("Hey there! Welcome to Bamazon where you can buy what ever you need to make your wishes come true! Listed we have the products, their costs and the current amount in stock.");
         for (var i = 0; i < products.length; i++) {
             var productsResults = "\n" +
-                "ItemID: " + products[i].ProductID + "\n" +
+                "ProductID: " + products[i].ProductID + "\n" +
                 "Product Description: " + products[i].ProductName + "\n" +
                 "Product Department: " + products[i].DepartmentName + "\n" +
                 "Price: $ " + products[i].Price + "\n" +
