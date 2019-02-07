@@ -1,1 +1,3 @@
 # Node.js-MySQL
+
+This app is meant to emulate Amazon and it is appropreiately named "Bamazon".  It used JS, My MQL and the npm install package to use mysql and prompt.  The products are organized into "Product ID, Product Name, Department Name, Price and stock quantity".  The User is asked to input the ID of the item he or she would like to buy, and then is prompted to enter a number that they want to buy.  If it is less than the stock quantity, they are able to "buy" and it shows the price.  If they want more than the number in stock, they are given an error that it exceeds the stock quantity. 
